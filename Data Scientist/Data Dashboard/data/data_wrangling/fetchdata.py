@@ -68,7 +68,7 @@ def fetchDataFromAPI():
     return dfAns
 
 def return_figure():
-    fetchFromAPI = False
+    fetchFromAPI = True
     if fetchFromAPI:
         dfAns = fetchDataFromAPI()
     else:
