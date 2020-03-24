@@ -28,6 +28,7 @@ def interact(env, agent, num_episodes=20000, window=100):
     for i_episode in range(1, num_episodes+1):
         # begin the episode
         state = env.reset()
+        agent.update_eps()
         # initialize the sampled reward
         samp_reward = 0
         while True:

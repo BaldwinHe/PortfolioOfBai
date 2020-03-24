@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99738c6a-9acc-4b31-aa47-8850f21710c6" name="Default Changelist" comment="" />
+    <list default="true" id="99738c6a-9acc-4b31-aa47-8850f21710c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Reinforcement Learning/Taxi-v3/agent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reinforcement Learning/Taxi-v3/images/expected_sarsa.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/.idea/Data Dashboard.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/Procfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/app/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/app/routes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/app/static/img/githublogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/app/static/img/icon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/app/static/img/note.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/app/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/data/.ipynb_checkpoints/fetchData-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/data/data_wrangling/fetchdata.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/data/dataset/data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/data/fetchData.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Taxi-v2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Taxi-v3/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Taxi-v2/agent.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Taxi-v2/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Taxi-v3/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Taxi-v2/monitor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Taxi-v3/monitor.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jupyter Notebook" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JupyterTrust" id="444eb71e-62b7-4743-9e52-6e61d35fd1d3">
+    <option name="files">
+      <option value="Reinforcement Learning/Taxi-v2/taxi-v2.ipynb" />
+    </option>
   </component>
   <component name="ProjectId" id="1ZFpYuWPQro5WG0iphhoREj29pv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -21,6 +60,63 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Reinforcement Learning/Taxi-v3/images" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="PortfolioOfBai" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="taxi-v3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PortfolioOfBai" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Reinforcement Learning/Taxi-v3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Reinforcement Learning/Taxi-v3/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.taxi-v3" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -33,10 +129,50 @@
       <option name="presentableId" value="Default" />
       <updated>1584444746603</updated>
       <workItem from="1584444823662" duration="1979000" />
+      <workItem from="1584771615743" duration="2091000" />
+      <workItem from="1585018126941" duration="240000" />
+      <workItem from="1585019947047" duration="9328000" />
+      <workItem from="1585046171055" duration="53000" />
+      <workItem from="1585046271155" duration="330000" />
+      <workItem from="1585046652380" duration="1868000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="104" y="75" width="1071" height="699" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585027633425">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="104" y="75" width="1071" height="699" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.777@0.23.1280.777" timestamp="1585027633425" />
+    <state width="1238" height="197" key="GridCell.Tab.0.bottom" timestamp="1585035628066">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1238" height="197" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1585035628066" />
+    <state width="1238" height="197" key="GridCell.Tab.0.center" timestamp="1585035628063">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1238" height="197" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1585035628063" />
+    <state width="1238" height="197" key="GridCell.Tab.0.left" timestamp="1585035628063">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1238" height="197" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1585035628063" />
+    <state width="1238" height="197" key="GridCell.Tab.0.right" timestamp="1585035628064">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1238" height="197" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1585035628064" />
+    <state x="228" y="153" key="IDE.errors.dialog" timestamp="1585046928328">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="228" y="153" key="IDE.errors.dialog/0.23.1280.777@0.23.1280.777" timestamp="1585046928328" />
+    <state x="193" y="78" key="SettingsEditor" timestamp="1585046605673">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="193" y="78" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1585046605673" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/PortfolioOfBai$main.coverage" NAME="main Coverage Results" MODIFIED="1585024483459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Reinforcement Learning/Taxi-v2" />
+    <SUITE FILE_PATH="coverage/PortfolioOfBai$main__1_.coverage" NAME="taxi-v3 Coverage Results" MODIFIED="1585035628020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Reinforcement Learning/Taxi-v3" />
   </component>
 </project>
