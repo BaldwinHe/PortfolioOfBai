@@ -1,15 +1,15 @@
-import collections
-import torch
-from unityagents import UnityEnvironment
-import numpy as np
-from agent import *
 import sys
+
+import torch
+from agent import *
+from config import *
+from unityagents import UnityEnvironment
+
 if __name__ == '__main__':
     agent = AgentFC(37, 4)
-    agent.qnet_local.load_state_dict(torch.load('checkpoints/DQN/checkpoint_s_FC_669.pth'
-                                                ,map_location=torch.device('cpu')))
+    agent.qnet_local.load_state_dict(torch.load(args.checkpoint, map_location=torch.device('cpu')))
 
-    env = UnityEnvironment(file_name="./Banana.app")
+    env = UnityEnvironment(file_name=args.unity)
 
     brain_name = env.brain_names[0]
     brain = env.brains[brain_name]

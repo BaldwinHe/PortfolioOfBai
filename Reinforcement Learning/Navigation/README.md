@@ -1,55 +1,77 @@
-[//]: # (Image References)
 
-[image1]: https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif "Trained Agent"
+# Banana Collector
 
-# Project 1: Navigation
+This is Pytorch implementation for reinforcement learning project `Banana Collector`
 
-### Introduction
+## Introduction
 
-For this project, you will train an agent to navigate (and collect bananas!) in a large, square world.  
+An intelligent agent use DQN to navigate and collect bananas! in a large, square world.  
 
-![Trained Agent][image1]
+A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana.  
 
-A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana.  Thus, the goal of your agent is to collect as many yellow bananas as possible while avoiding blue bananas.  
+The goal of your agent is to collect as many yellow bananas as possible while avoiding blue bananas.  
 
-The state space has 37 dimensions and contains the agent's velocity, along with ray-based perception of objects around agent's forward direction.  Given this information, the agent has to learn how to best select actions.  Four discrete actions are available, corresponding to:
-- **`0`** - move forward.
-- **`1`** - move backward.
-- **`2`** - turn left.
-- **`3`** - turn right.
+## Prerequisites
+* Python 3.6
+* Pytorch 1.4
 
-The task is episodic, and in order to solve the environment, your agent must get an average score of +13 over 100 consecutive episodes.
+## Installation
+* Clone this repo:
 
-### Getting Started
+```
+git clone https://github.com/BaldwinHe/ProfolioOfBai
+cd PortfolioOfBai/Reinforcement Learning/Navigation/
+```
+* Install python requirements:
 
-1. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
-    - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
-    - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
-    - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip)
-    - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip)
+```
+pip install -r requirements.txt
+```
+* Install unity environment file:
+    - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Linux.zip)
+    - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana.app.zip)
+    - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Windows_x86.zip)
+    - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Windows_x86_64.zip)
     
-    (_For Windows users_) Check out [this link](https://support.microsoft.com/en-us/help/827218/how-to-determine-whether-a-computer-is-running-a-32-bit-version-or-64) if you need help with determining if your computer is running a 32-bit version or 64-bit version of the Windows operating system.
+## Getting Started
 
-    (_For AWS_) If you'd like to train the agent on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md)), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux_NoVis.zip) to obtain the environment.
+### 0. Quick Testing
 
-2. Place the file in the DRLND GitHub repository, in the `p1_navigation/` folder, and unzip (or decompress) the file. 
+To see how our trained model performs in collecting bananas, run the code below:
 
-### Instructions
+```
+python test.py --unity [path to unity environment] --checkpoint ./checkpoints/DQN/checkpointFC_final.pth
+```
 
-Follow the instructions in `Navigation.ipynb` to get started with training your own agent!  
+### 1. Training
 
-### (Optional) Challenge: Learning from Pixels
 
-After you have successfully completed the project, if you're looking for an additional challenge, you have come to the right place!  In the project, your agent learned from information such as its velocity, along with ray-based perception of objects around its forward direction.  A more challenging task would be to learn directly from pixels!
+```
+python train.py --unity [path to unity environment] 
+```
 
-To solve this harder task, you'll need to download a new Unity environment.  This environment is almost identical to the project environment, where the only difference is that the state is an 84 x 84 RGB image, corresponding to the agent's first-person view.  (**Note**: Udacity students should not submit a project with this new environment.)
+### 2. Testing
 
-You need only select the environment that matches your operating system:
-- Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Linux.zip)
-- Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana.app.zip)
-- Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Windows_x86.zip)
-- Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Windows_x86_64.zip)
+```
+python test.py --unity [path to unity environment] --checkpoint [path to checkpoint]
+```
 
-Then, place the file in the `p1_navigation/` folder in the DRLND GitHub repository, and unzip (or decompress) the file.  Next, open `Navigation_Pixels.ipynb` and follow the instructions to learn how to use the Python API to control the agent.
 
-(_For AWS_) If you'd like to train the agent on AWS, you must follow the instructions to [set up X Server](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md), and then download the environment for the **Linux** operating system above.
+## Results
+
+### 0.Comparison between inexperienced and trained agent
+![banana collector demo](https://github.com/BaldwinHe/DemoLibrary/blob/master/Reinforcement%20Learning/Banana%20Collector/banana_result.gif)
+
+### 1. Plot of rewards per episode
+![score](https://github.com/BaldwinHe/DemoLibrary/blob/master/Reinforcement%20Learning/Banana%20Collector/score_result.png)
+
+## Ideas for Future Work
+> try some DQN improvments methods
+
+* [ ] Double DQN(DDQN)
+* [ ] Prioritized Experience Replay(Prioritized DQN)
+* [ ] Dueling DQN
+* [ ] A3C
+* [ ] Distributional DQN
+* [ ] Noisy DQN
+* [ ] Rainbow

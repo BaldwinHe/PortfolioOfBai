@@ -3,6 +3,7 @@ import torch
 from agent import *
 from unityagents import UnityEnvironment
 import numpy as np
+from config import *
 
 def train(agent, env ,net='FC', n_episodes=30000, max_t=10000, eps_start=1.0, eps_end=0.01, eps_decay=0.995):
     """ Deep Q-Learning.
@@ -62,7 +63,7 @@ def train(agent, env ,net='FC', n_episodes=30000, max_t=10000, eps_start=1.0, ep
 
 
 if __name__ == '__main__':
-    env = UnityEnvironment(file_name="./Banana.app")
+    env = UnityEnvironment(file_name=args.unity)
 
     agent = AgentFC(37, 4)
 

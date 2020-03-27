@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="99738c6a-9acc-4b31-aa47-8850f21710c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard" beforeDir="false" afterPath="$PROJECT_DIR$/Data Scientist/Data Dashboard" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/.idea/Data Dashboard.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/.idea/misc.xml" beforeDir="false" />
@@ -22,6 +23,14 @@
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/data/dataset/data.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/data/fetchData.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/Banana.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/Navigation.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/Navigation_Pixels.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Navigation/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/checkpoints/DQN/checkpointFC_end.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Navigation/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Navigation/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/unity-environment.log" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Navigation/unity-environment.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
