@@ -1,0 +1,34 @@
+import collections
+import torch
+from unityagents import UnityEnvironment
+import numpy as np
+from agent import *
+import sys
+if __name__ == '__main__':
+    agent = AgentFC(37, 4)
+    agent.qnet_local.load_state_dict(torch.load('checkpoints/DQN/checkpoint_s_FC_669.pth'
+                                                ,map_location=torch.device('cpu')))
+
+    env = UnityEnvironment(file_name="./Banana.app")
+
+    brain_name = env.brain_names[0]
+    brain = env.brains[brain_name]
+
+    env_info = env.reset(train_mode=False)[brain_name]  # reset the environment
+    state = env_info.vector_observations[0]  # get the current state
+    score = 0  # initialize the score
+    t_max = 1000
+    while t_max > 0:
+        action = agent.act(state) # select an action
+        env_info = env.step(action)[brain_name]  # send the action to the environment
+        next_state = env_info.vector_observations[0]  # get the next state
+        reward = env_info.rewards[0]  # get the reward
+        done = env_info.local_done[0]  # see if episode has finished
+        score += reward  # update the score
+        state = next_state  # roll over the state to next time step
+        print("{}-Score: {}".format(t_max, score))
+        sys.stdout.flush()
+        t_max -= 1
+        if done:  # exit loop if episode finished
+            break
+
