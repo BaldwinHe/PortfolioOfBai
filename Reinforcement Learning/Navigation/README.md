@@ -55,7 +55,8 @@ python train.py --unity [path to unity environment]
 ```
 python test.py --unity [path to unity environment] --checkpoint [path to checkpoint]
 ```
-
+### 3. Apply DQN improvement methods
+* `--double` : Double DQN
 
 ## Results
 
@@ -66,9 +67,9 @@ python test.py --unity [path to unity environment] --checkpoint [path to checkpo
 ![score](https://github.com/BaldwinHe/DemoLibrary/blob/master/Reinforcement%20Learning/Banana%20Collector/score_result.png)
 
 ## Ideas for Future Work
-> try some DQN improvments methods
+> try some DQN improvment methods
 
-* [ ] Double DQN(DDQN)
+* [x] Double DQN(DDQN)
 * [ ] Prioritized Experience Replay(Prioritized DQN)
 * [ ] Dueling DQN
 * [ ] A3C

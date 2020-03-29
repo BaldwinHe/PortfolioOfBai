@@ -23,13 +23,19 @@
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/data/dataset/data.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/data/fetchData.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/Banana.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/Navigation.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/Navigation_Pixels.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Navigation/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/checkpoints/DQN/checkpointFC_end.pth" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Navigation/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Navigation/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Navigation/agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/checkpoints/DQN/checkpointFC_0.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/checkpoints/DQN/checkpointFC_100.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/checkpoints/DQN/checkpointFC_200.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/checkpoints/DQN/checkpointFC_300.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/checkpoints/DQN/checkpointFC_400.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/checkpoints/DQN/checkpointFC_500.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/checkpoints/DQN/checkpointFC_600.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/checkpoints/DQN/checkpointFC_final.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/checkpoints/DQN/scores.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Navigation/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/results/plot.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Navigation/results/plot.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/unity-environment.log" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Navigation/unity-environment.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,6 +184,8 @@
       <workItem from="1585194357602" duration="7785000" />
       <workItem from="1585205332878" duration="3566000" />
       <workItem from="1585225538451" duration="938000" />
+      <workItem from="1585399925481" duration="1621000" />
+      <workItem from="1585403276043" duration="1168000" />
     </task>
     <servers />
   </component>
