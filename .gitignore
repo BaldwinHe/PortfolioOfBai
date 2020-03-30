@@ -4,3 +4,6 @@ venv/
 **/.DS_Store
 **/**.cpython-36.pyc
 **/**/Banana.app/
+*.ipynb
+**/**/Reacher*
+**/**/**.app/
