@@ -6,6 +6,8 @@ import torch
 import torch.optim as optim
 from config import *
 from model import *
+from utils.MemoryBuffer import *
+import torch.nn.functional as F
 
 BUFFER_SIZE = int(1e5)
 BATCH_SIZE = 64
@@ -35,8 +37,10 @@ class AgentFC():
         self.optimizer = optim.Adam(self.qnet_local.parameters(), lr=LR)
         self.criterion = torch.nn.MSELoss()
 
-        self.memory = ReplayBuffer(action_size, BUFFER_SIZE, BATCH_SIZE)
-
+        if args.prioritized:
+            self.memory = PrioritizedReplayBuffer(BUFFER_SIZE, BATCH_SIZE)
+        else:
+            self.memory = ReplayBuffer(BUFFER_SIZE, BATCH_SIZE)
         self.t_step = 0
 
     def step(self, state, action, reward, next_state, done):
@@ -77,7 +81,10 @@ class AgentFC():
         :param gamma (float): discount factor
         """
 
-        states, actions, rewards, next_states, dones = experiences
+        if args.prioritized:
+            states, actions, rewards, next_states, dones, indexs, weights = experiences
+        else:
+            states, actions, rewards, next_states, dones = experiences
 
         # whether apply double DQN method
         if args.double == True:
@@ -96,8 +103,21 @@ class AgentFC():
         # Get expected Q values from local model
         Q_expected = self.qnet_local(states).gather(1, actions)
 
+        if args.prioritized:
+            errors = torch.abs(Q_expected - Q_targets).data.numpy()
+            size = errors.shape[0]
+            for i in range(size):
+                idx = indexs[i]
+                self.memory.update(idx, errors[i][0])
+
+
         # Compute loss
-        loss = self.criterion(Q_expected, Q_targets)
+        if args.prioritized:
+            Q_expected = Q_expected * torch.FloatTensor(weights)
+            Q_targets = Q_targets * torch.FloatTensor(weights)
+            loss = self.criterion(Q_expected, Q_targets)
+        else:
+            loss = self.criterion(Q_expected, Q_targets)
         # Minimize the loss
         self.optimizer.zero_grad()
         loss.backward()
@@ -117,51 +137,3 @@ class AgentFC():
 
         for target_param, local_param in zip(target_model.parameters(), local_model.parameters()):
             target_param.data.copy_(tau * local_param.data + (1 - tau) * target_param.data)
-
-
-class ReplayBuffer():
-    """Fixed-size buffer to store experience tuples"""
-    def __init__(self, action_size, buffer_size, batch_size):
-        """Initialize a ReplayBuffer object
-
-        :param action_size(int): dimension of each action
-        :param buffer_size(int): maximum size of buffer
-        :param batch_size(int: size of each training batch
-        """
-
-        self.action_size = action_size
-        self.memory = deque(maxlen=buffer_size)
-        self.batch_size = batch_size
-        self.experence = namedtuple("Experience", field_names=["state", "action","reward", "next_state","done"])
-
-    def add(self, state, action, reward, next_state, done):
-        """Add a new experience to memory"""
-        e = self.experence(state, action, reward, next_state, done)
-        self.memory.append(e)
-
-    def map_reward(self, reward):
-        """modify reward to get yello banana quickly"""
-        if reward > 0:
-            return 2.0
-        elif reward < 0:
-            return -1.5
-        else :
-            return 0
-
-    def sample(self):
-        """Randomly sample a batch of experience from memory"""
-
-        experiences = random.sample(self.memory, k=self.batch_size)
-
-        states = torch.from_numpy(np.vstack([e.state for e in experiences if e is not None])).float().to(device)
-        actions = torch.from_numpy(np.vstack([e.action for e in experiences if e is not None])).long().to(device)
-        rewards = torch.from_numpy(np.vstack([e.reward for e in experiences if e is not None])).float().to(device)
-        next_states = torch.from_numpy(np.vstack([e.next_state for e in experiences if e is not None])).float().to(device)
-        dones = torch.from_numpy(np.vstack([e.done for e in experiences if e is not None]).astype(np.uint8)).float().to(device)
-
-        return (states, actions, rewards, next_states, dones)
-
-    def __len__(self):
-        """Return the current size of internal memory."""
-
-        return len(self.memory)

@@ -23,17 +23,7 @@
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/data/dataset/data.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/data/fetchData.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Navigation/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Navigation/agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/checkpoints/DQN/checkpointFC_0.pth" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/checkpoints/DQN/checkpointFC_100.pth" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/checkpoints/DQN/checkpointFC_200.pth" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/checkpoints/DQN/checkpointFC_300.pth" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/checkpoints/DQN/checkpointFC_400.pth" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/checkpoints/DQN/checkpointFC_500.pth" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/checkpoints/DQN/checkpointFC_600.pth" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/checkpoints/DQN/checkpointFC_final.pth" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/checkpoints/DQN/scores.npy" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Navigation/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/results/plot.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Navigation/results/plot.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/unity-environment.log" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Navigation/unity-environment.log" afterDir="false" />
@@ -83,7 +73,16 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="PortfolioOfBai" is-module-sdk="true" working-directory="$PROJECT_DIR$/Reinforcement Learning/Navigation">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="PortfolioOfBai" />
+        <option name="myWorkingDirectory" value="$PROJECT_DIR$/Reinforcement Learning/Navigation" />
+      </console-settings>
+    </option>
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -185,7 +184,8 @@
       <workItem from="1585205332878" duration="3566000" />
       <workItem from="1585225538451" duration="938000" />
       <workItem from="1585399925481" duration="1621000" />
-      <workItem from="1585403276043" duration="1168000" />
+      <workItem from="1585403276043" duration="1314000" />
+      <workItem from="1585460341587" duration="15830000" />
     </task>
     <servers />
   </component>
@@ -234,10 +234,10 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="170" y="69" key="Registry/0.23.1280.777@0.23.1280.777" timestamp="1584886706246" />
-    <state x="141" y="28" key="SettingsEditor" timestamp="1585205625553">
+    <state x="141" y="28" key="SettingsEditor" timestamp="1585469689272">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="141" y="28" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1585096627561" />
+    <state x="141" y="28" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1585469689272" />
     <state x="141" y="50" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1585194773444" />
     <state x="141" y="28" key="SettingsEditor/1280.43.1440.900/0.0.1280.800@0.0.1280.800" timestamp="1585205625553" />
     <state x="422" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585095381961">

@@ -56,7 +56,8 @@ python train.py --unity [path to unity environment]
 python test.py --unity [path to unity environment] --checkpoint [path to checkpoint]
 ```
 ### 3. Apply DQN improvement methods
-* `--double` : Double DQN
+* `--double`: Double DQN
+* `--prioritized`: Prioritized Experience Replay DQN
 
 ## Results
 
@@ -70,9 +71,11 @@ python test.py --unity [path to unity environment] --checkpoint [path to checkpo
 > try some DQN improvment methods
 
 * [x] Double DQN(DDQN)
-* [ ] Prioritized Experience Replay(Prioritized DQN)
+* [x] Prioritized Experience Replay(Prioritized DQN) ***?***
 * [ ] Dueling DQN
 * [ ] A3C
 * [ ] Distributional DQN
 * [ ] Noisy DQN
 * [ ] Rainbow
+
+> Not sure about my implementation of **PER (Prioritized Experience Replay)**, which  perform much worse than **Vanilla DQN**. ( wait to be checked😁
