@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99738c6a-9acc-4b31-aa47-8850f21710c6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard" beforeDir="false" afterPath="$PROJECT_DIR$/Data Scientist/Data Dashboard" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/.idea/Data Dashboard.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/.idea/misc.xml" beforeDir="false" />
@@ -23,9 +23,6 @@
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/data/dataset/data.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/data/fetchData.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Navigation/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/results/plot.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Navigation/results/plot.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Navigation/unity-environment.log" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Navigation/unity-environment.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +67,7 @@
     <property name="DefaultPlantUmlFileTemplate" value="UML Class" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/Reinforcement Learning/Reacher/utils/MemoryBuffer.py&#10;/Users/heyanbai/Desktop/ProfolioOfBai/Reinforcement Learning/Reacher/utils/SumTree.py&#10;/Users/heyanbai/Desktop/ProfolioOfBai/Reinforcement Learning/Reacher/agent.py&#10;/Users/heyanbai/Desktop/ProfolioOfBai/Reinforcement Learning/Reacher/test.py&#10;/Users/heyanbai/Desktop/ProfolioOfBai/Reinforcement Learning/Reacher/config.py&#10;/Users/heyanbai/Desktop/ProfolioOfBai/Reinforcement Learning/Reacher/model.py" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
@@ -184,7 +182,7 @@
       <workItem from="1585225538451" duration="938000" />
       <workItem from="1585399925481" duration="1621000" />
       <workItem from="1585403276043" duration="1314000" />
-      <workItem from="1585460341587" duration="15830000" />
+      <workItem from="1585460341587" duration="24957000" />
     </task>
     <servers />
   </component>
@@ -201,6 +199,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="380" y="245" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.800@0.0.1280.800" timestamp="1585212712349" />
+    <state x="221" y="23" key="CommitChangelistDialog2" timestamp="1585640338901">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="221" y="23" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1585640338901" />
     <state x="394" y="171" key="EnvironmentVariablesDialog" timestamp="1585096203429">
       <screen x="0" y="0" width="1280" height="800" />
     </state>

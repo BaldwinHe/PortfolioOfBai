@@ -5,4 +5,4 @@ venv/
 **/**.cpython-36.pyc
 **/**/Banana.app/
 *.ipynb
-**/**/Reacher*
+**/**/**.app/
