@@ -22,6 +22,12 @@
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/data/dataset/data.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/data/fetchData.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Crawler/agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Crawler/agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Crawler/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Crawler/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Crawler/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Crawler/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Crawler/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Crawler/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Crawler/unity-environment.log" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Crawler/unity-environment.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Crawler/utils/MemoryBuffer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Crawler/utils/MemoryBuffer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,6 +132,7 @@
       <workItem from="1585046271155" duration="330000" />
       <workItem from="1585046652380" duration="2128000" />
       <workItem from="1585719193015" duration="661000" />
+      <workItem from="1585752007167" duration="944000" />
     </task>
     <servers />
   </component>
