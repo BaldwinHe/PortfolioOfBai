@@ -9,7 +9,7 @@ class PrioritizedReplayBuffer():
     alpha = 0.6
     beta = 0.4
     epsilon = 0.00001
-    beta_increment_per_sampling = 0.01
+    beta_increment_per_sampling = 0.002
     abs_err_upper = 1.0  # clipped abs error
 
     def __init__(self, buffer_size, batch_size):

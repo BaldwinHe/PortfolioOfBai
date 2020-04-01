@@ -2,12 +2,12 @@ import collections
 
 import numpy as np
 from unityagents import UnityEnvironment
-
+from tqdm import tqdm
 from agent import *
 from config import *
 
 
-def train(agent, env, n_episodes=30000, max_t=10000):
+def train(agent, env, n_episodes=30000, max_t=100000):
     # get the default brain
     brain_name = env.brain_names[0]
 

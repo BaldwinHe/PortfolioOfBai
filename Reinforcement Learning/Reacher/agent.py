@@ -29,8 +29,8 @@ class Agent():
         self.actor_target.load_state_dict(self.actor.state_dict())
         self.actor_optimizer = optim.Adam(self.actor.parameters(), lr=ACTOR_LR)
 
-        self.critic = CriticNet(state_dim, action_dim)
-        self.critic_target = CriticNet(state_dim, action_dim)
+        self.critic = CriticNet(state_dim, action_dim).to(device)
+        self.critic_target = CriticNet(state_dim, action_dim).to(device)
         self.critic_target.load_state_dict(self.critic.state_dict())
         self.critic_optimizer = optim.Adam(self.critic.parameters(), lr=CRITIC_LR, weight_decay=WEIGHT_DECAY)
 

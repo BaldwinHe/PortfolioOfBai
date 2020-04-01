@@ -24,7 +24,6 @@
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/requirements.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reacher/agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/agent.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reacher/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reacher/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reacher/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/train.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reacher/unity-environment.log" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/unity-environment.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reacher/utils/MemoryBuffer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/utils/MemoryBuffer.py" afterDir="false" />
@@ -187,7 +186,7 @@
       <workItem from="1585225538451" duration="938000" />
       <workItem from="1585399925481" duration="1621000" />
       <workItem from="1585403276043" duration="1314000" />
-      <workItem from="1585460341587" duration="32063000" />
+      <workItem from="1585460341587" duration="35820000" />
     </task>
     <servers />
   </component>
