@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99738c6a-9acc-4b31-aa47-8850f21710c6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/.idea/Data Dashboard.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/.idea/misc.xml" beforeDir="false" />
@@ -37,11 +38,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JupyterTrust" id="444eb71e-62b7-4743-9e52-6e61d35fd1d3">
-    <option name="files">
-      <option value="Reinforcement Learning/Taxi-v2/taxi-v2.ipynb" />
-    </option>
-  </component>
+  <component name="JupyterTrust" id="444eb71e-62b7-4743-9e52-6e61d35fd1d3" />
   <component name="ProjectId" id="1ZFpYuWPQro5WG0iphhoREj29pv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -128,6 +125,7 @@
       <workItem from="1585046171055" duration="53000" />
       <workItem from="1585046271155" duration="330000" />
       <workItem from="1585046652380" duration="2128000" />
+      <workItem from="1585719193015" duration="661000" />
     </task>
     <servers />
   </component>
