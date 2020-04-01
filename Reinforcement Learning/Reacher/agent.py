@@ -18,26 +18,26 @@ device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 class Agent():
     """Interacts with ans learns from the environment"""
 
-    def __init__(self, state_dim, action_dim, max_action_value):
+    def __init__(self, state_dim, action_dim, max_action_value,seed):
 
         self.state_dim = state_dim
         self.action_dim = action_dim
-        self.seed = np.random.randint(100000,999999)
+        self.seed = seed
 
-        self.actor = ActorNet(state_dim, action_dim, max_action_value).to(device)
-        self.actor_target = ActorNet(state_dim, action_dim, max_action_value).to(device)
+        self.actor = ActorNet(state_dim, action_dim, max_action_value, seed).to(device)
+        self.actor_target = ActorNet(state_dim, action_dim, max_action_value, seed).to(device)
         self.actor_target.load_state_dict(self.actor.state_dict())
         self.actor_optimizer = optim.Adam(self.actor.parameters(), lr=ACTOR_LR)
 
-        self.critic = CriticNet(state_dim, action_dim).to(device)
-        self.critic_target = CriticNet(state_dim, action_dim).to(device)
+        self.critic = CriticNet(state_dim, action_dim, seed).to(device)
+        self.critic_target = CriticNet(state_dim, action_dim, seed).to(device)
         self.critic_target.load_state_dict(self.critic.state_dict())
         self.critic_optimizer = optim.Adam(self.critic.parameters(), lr=CRITIC_LR, weight_decay=WEIGHT_DECAY)
 
         if args.prioritized:
-            self.memory = PrioritizedReplayBuffer(BUFFER_SIZE, BATCH_SIZE)
+            self.memory = PrioritizedReplayBuffer(BUFFER_SIZE, BATCH_SIZE, seed)
         else:
-            self.memory = ReplayBuffer(BUFFER_SIZE, BATCH_SIZE)
+            self.memory = ReplayBuffer(BUFFER_SIZE, BATCH_SIZE, seed)
 
         # Noise process
         self.noise = OUNoise(action_dim, self.seed)
@@ -66,7 +66,13 @@ class Agent():
             action += self.noise.sample()
         return np.clip(action, -1, 1)
 
-    def learn(self,experiences = None, gamma = None):
+    def sample_and_learn(self):
+        # Learn, if enough samples are available in memory
+        if len(self.memory) > BATCH_SIZE:
+            for _ in range(10):
+                self.learn()
+
+    def learn(self):
 
         gamma = GAMMA
 
@@ -75,27 +81,31 @@ class Agent():
         else:
             states, actions, rewards, next_states, dones = self.memory.sample()
 
+
         target_Q = self.critic_target(next_states, self.actor_target(next_states))
+
+
         target_Q = rewards + (gamma * target_Q * (1 - dones)).detach()
 
         current_Q = self.critic(states, actions)
 
 
         if args.prioritized:
-            errors = torch.abs(current_Q - target_Q).data.numpy()
+            errors = torch.abs(current_Q.cpu() - target_Q.cpu()).data.numpy()
             size = errors.shape[0]
             for i in range(size):
                 idx = indexs[i]
                 self.memory.update(idx, errors[i][0])
 
-            current_Q = current_Q * torch.FloatTensor(weights)
-            target_Q = target_Q * torch.FloatTensor(weights)
+            current_Q = current_Q * torch.FloatTensor(weights).to(device)
+            target_Q = target_Q * torch.FloatTensor(weights).to(device)
             critic_loss = F.mse_loss(current_Q, target_Q)
         else:
             critic_loss = F.mse_loss(current_Q, target_Q)
 
         self.critic_optimizer.zero_grad()
         critic_loss.backward()
+        torch.nn.utils.clip_grad_norm_(self.critic.parameters(), 1)
         self.critic_optimizer.step()
 
         actor_loss = -self.critic(states, self.actor(states)).mean()

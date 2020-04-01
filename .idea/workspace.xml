@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99738c6a-9acc-4b31-aa47-8850f21710c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/A3C/A3C.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/.idea/Data Dashboard.iml" beforeDir="false" />
@@ -23,10 +24,15 @@
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/data/fetchData.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/requirements.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reacher/agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reacher/checkpoints/Vanilla DDPG_single/actor_checkpoint.pth" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/checkpoints/Vanilla DDPG_single/actor_checkpoint.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reacher/checkpoints/Vanilla DDPG_single/critic_checkpoint.pth" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/checkpoints/Vanilla DDPG_single/critic_checkpoint.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reacher/checkpoints/Vanilla DDPG_single/scores.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/checkpoints/Vanilla DDPG_single/scores.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reacher/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reacher/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reacher/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/train.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reacher/unity-environment.log" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/unity-environment.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reacher/utils/MemoryBuffer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/utils/MemoryBuffer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reachers.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +67,9 @@
   </component>
   <component name="JupyterTrust" id="444eb71e-62b7-4743-9e52-6e61d35fd1d3" />
   <component name="ProjectId" id="1ZFpYuWPQro5WG0iphhoREj29pv" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -74,7 +82,7 @@
     <property name="add_unversioned_files" value="$PROJECT_DIR$/Reinforcement Learning/Reacher/utils/MemoryBuffer.py&#10;/Users/heyanbai/Desktop/ProfolioOfBai/Reinforcement Learning/Reacher/utils/SumTree.py&#10;/Users/heyanbai/Desktop/ProfolioOfBai/Reinforcement Learning/Reacher/agent.py&#10;/Users/heyanbai/Desktop/ProfolioOfBai/Reinforcement Learning/Reacher/test.py&#10;/Users/heyanbai/Desktop/ProfolioOfBai/Reinforcement Learning/Reacher/config.py&#10;/Users/heyanbai/Desktop/ProfolioOfBai/Reinforcement Learning/Reacher/model.py" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -90,7 +98,29 @@
       <recent name="$PROJECT_DIR$/Reinforcement Learning/Navigation" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.tf2">
+  <component name="RunManager" selected="Python.A3C">
+    <configuration name="A3C" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PortfolioOfBai" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda3/envs/tensorflow_2.x/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Reinforcement Learning/Reacher/A3C" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Reinforcement Learning/Reacher/A3C/A3C.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -160,9 +190,11 @@
     <list>
       <item itemvalue="Python.tf2" />
       <item itemvalue="Python.model" />
+      <item itemvalue="Python.A3C" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.A3C" />
         <item itemvalue="Python.model" />
       </list>
     </recent_temporary>
@@ -187,6 +219,10 @@
       <workItem from="1585399925481" duration="1621000" />
       <workItem from="1585403276043" duration="1314000" />
       <workItem from="1585460341587" duration="35820000" />
+      <workItem from="1585720185232" duration="1739000" />
+      <workItem from="1585732652606" duration="1090000" />
+      <workItem from="1585739264352" duration="5680000" />
+      <workItem from="1585745971399" duration="2575000" />
     </task>
     <servers />
   </component>
@@ -211,10 +247,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="394" y="171" key="EnvironmentVariablesDialog/0.0.1280.800@0.0.1280.800" timestamp="1585096203429" />
-    <state x="427" y="162" key="FileChooserDialogImpl" timestamp="1585096327324">
+    <state x="427" y="162" key="FileChooserDialogImpl" timestamp="1585721596814">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="427" y="162" key="FileChooserDialogImpl/0.0.1280.800@0.0.1280.800" timestamp="1585096327321" />
+    <state x="427" y="162" key="FileChooserDialogImpl/0.0.1280.800@0.0.1280.800" timestamp="1585721596814" />
     <state width="798" height="149" key="GridCell.Tab.0.bottom" timestamp="1585226139694">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -239,12 +275,13 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="170" y="69" key="Registry/0.23.1280.777@0.23.1280.777" timestamp="1584886706246" />
-    <state x="141" y="28" key="SettingsEditor" timestamp="1585469689272">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="141" y="50" key="SettingsEditor" timestamp="1585739764408">
+      <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="141" y="28" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1585469689272" />
     <state x="141" y="50" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1585194773444" />
     <state x="141" y="28" key="SettingsEditor/1280.43.1440.900/0.0.1280.800@0.0.1280.800" timestamp="1585205625553" />
+    <state x="141" y="50" key="SettingsEditor/1280.66.1440.877/0.23.1280.777@0.23.1280.777" timestamp="1585739764408" />
     <state x="422" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585095381961">
       <screen x="0" y="23" width="1280" height="777" />
     </state>

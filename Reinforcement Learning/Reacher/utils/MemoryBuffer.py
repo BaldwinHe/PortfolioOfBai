@@ -12,7 +12,8 @@ class PrioritizedReplayBuffer():
     beta_increment_per_sampling = 0.002
     abs_err_upper = 1.0  # clipped abs error
 
-    def __init__(self, buffer_size, batch_size):
+    def __init__(self, buffer_size, batch_size, seed):
+        self.seed = random.seed(seed)
         self.batch_size = batch_size
         self.experience = namedtuple("Experience", field_names=["state", "action","reward", "next_state","done"])
         self.memory = SumTree(buffer_size)
@@ -20,14 +21,15 @@ class PrioritizedReplayBuffer():
     def get_priority(self, reward):
         return (np.abs(reward) + self.epsilon) ** self.alpha
 
-    def add(self, state, action, reward, next_state, done):
+    def add(self, states, actions, rewards, next_states, dones):
         """Add a new experience to memory"""
-        # priority = self.get_priority(reward)
-        e = self.experience(state, action, reward, next_state, done)
-        max_priority = np.max(self.memory.tree_data[-self.memory.buffer_size:])
-        if(max_priority == 0):
-            max_priority = self.abs_err_upper
-        self.memory.add(max_priority, e)
+        for i in range(len(states)):
+            e = self.experience(states[i], actions[i], rewards[i],
+                                    next_states[i], dones[i])
+            max_priority = np.max(self.memory.tree_data[-self.memory.buffer_size:])
+            if(max_priority == 0):
+                max_priority = self.abs_err_upper
+            self.memory.add(max_priority, e)
 
     def update(self, idx, error):
         error += self.epsilon
@@ -71,20 +73,22 @@ class PrioritizedReplayBuffer():
 
 class ReplayBuffer():
     """Fixed-size buffer to store experience tuples"""
-    def __init__(self, buffer_size, batch_size):
+    def __init__(self, buffer_size, batch_size, seed):
         """Initialize a ReplayBuffer object
         :param buffer_size(int): maximum size of buffer
         :param batch_size(int: size of each training batch
         """
-
+        self.seed = seed
         self.memory = deque(maxlen=buffer_size)
         self.batch_size = batch_size
         self.experience = namedtuple("Experience", field_names=["state", "action","reward", "next_state","done"])
 
-    def add(self, state, action, reward, next_state, done):
+    def add(self, states, actions, rewards, next_states, dones):
         """Add a new experience to memory"""
-        e = self.experience(state, action, reward, next_state, done)
-        self.memory.append(e)
+        for i in range(len(states)):
+            e = self.experience(states[i], actions[i], rewards[i],
+                                next_states[i], dones[i])
+            self.memory.append(e)
 
     def sample(self):
         """Randomly sample a batch of experience from memory"""

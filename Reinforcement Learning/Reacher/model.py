@@ -11,8 +11,9 @@ def hidden_init(layer):
     return (-lim, lim)
 
 class ActorNet(nn.Module):
-    def __init__(self, state_dim, action_dim, max_action_value, fc_channel_base=64):
+    def __init__(self, state_dim, action_dim, max_action_value,seed, fc_channel_base=64):
         super(ActorNet,self).__init__()
+        self.seed = torch.manual_seed(seed)
         self.fc1 = nn.Linear(state_dim, fc_channel_base)
         self.fc2 = nn.Linear(fc_channel_base, fc_channel_base*6)
         self.fc3 = nn.Linear(fc_channel_base*6, fc_channel_base*8)
@@ -35,8 +36,9 @@ class ActorNet(nn.Module):
         return out
 
 class CriticNet(nn.Module):
-    def __init__(self, state_dim, action_dim,fc_channel_base=64):
+    def __init__(self, state_dim, action_dim,seed,fc_channel_base=64):
         super(CriticNet, self).__init__()
+        self.seed = torch.manual_seed(seed)
         self.fc1 = nn.Linear(state_dim + action_dim, fc_channel_base)
         self.fc2 = nn.Linear(fc_channel_base, fc_channel_base*6)
         self.fc3 = nn.Linear(fc_channel_base*6, fc_channel_base*8)
