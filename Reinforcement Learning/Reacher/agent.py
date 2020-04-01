@@ -1,21 +1,17 @@
-import random
-from collections import namedtuple, deque
-
-import numpy as np
-import torch
 import torch.optim as optim
+
 from config import *
 from model import *
 from utils.MemoryBuffer import *
-import torch.nn.functional as F
+from utils.OUNoise import *
 
 BUFFER_SIZE = int(1e5)
-BATCH_SIZE = 64
+BATCH_SIZE = 128
 GAMMA = 0.99
 TAU = 1e-3
 ACTOR_LR = 1e-4
 CRITIC_LR = 1e-3
-UPDATE_EVERY = 4
+WEIGHT_DECAY = 0        # L2 weight decay
 
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
@@ -26,6 +22,7 @@ class Agent():
 
         self.state_dim = state_dim
         self.action_dim = action_dim
+        self.seed = np.random.randint(100000,999999)
 
         self.actor = ActorNet(state_dim, action_dim, max_action_value).to(device)
         self.actor_target = ActorNet(state_dim, action_dim, max_action_value).to(device)
@@ -35,34 +32,44 @@ class Agent():
         self.critic = CriticNet(state_dim, action_dim)
         self.critic_target = CriticNet(state_dim, action_dim)
         self.critic_target.load_state_dict(self.critic.state_dict())
-        self.critic_optimizer = optim.Adam(self.critic.parameters(), lr=CRITIC_LR)
+        self.critic_optimizer = optim.Adam(self.critic.parameters(), lr=CRITIC_LR, weight_decay=WEIGHT_DECAY)
 
         if args.prioritized:
             self.memory = PrioritizedReplayBuffer(BUFFER_SIZE, BATCH_SIZE)
         else:
             self.memory = ReplayBuffer(BUFFER_SIZE, BATCH_SIZE)
 
+        # Noise process
+        self.noise = OUNoise(action_dim, self.seed)
+
         self.t_step = 0
+
+    def reset(self):
+        self.noise.reset()
 
     def step(self, state, action, reward, next_state, done):
         # Save experience in replay memory
         self.memory.add(state, action, reward, next_state, done)
+        #
+        # # # Learn every UPDATE_EXERY time steps
+        # if (len(self.memory) > BATCH_SIZE):
+        #     experiences = self.memory.sample()
+        #     self.learn(experiences, GAMMA)
 
-        # # Learn every UPDATE_EXERY time steps
-        # self.t_step = (self.t_step + 1) % UPDATE_EVERY
-        # if (self.t_step == 0):
-        #     # If enough sample are available in memory, get random subset and Learn
-        #     if (len(self.memory) > BATCH_SIZE):
-        #         experiences = self.memory.sample()
-        #         self.learn(experiences, GAMMA)
+    def act(self, state, add_noise=True):
+        state = torch.from_numpy(state).float().to(device)
+        self.actor.eval()
+        with torch.no_grad():
+            action = self.actor(state).cpu().data.numpy()
+        self.actor.train()
+        if add_noise:
+            action += self.noise.sample()
+        return np.clip(action, -1, 1)
 
-    def act(self, state):
-        state = torch.from_numpy(state).float().unsqueeze(0).to(device)
-        return self.actor(state).cpu().data.numpy().flatten()
-
-    def learn(self):
+    def learn(self,experiences = None, gamma = None):
 
         gamma = GAMMA
+
         if args.prioritized:
             states, actions, rewards, next_states, dones, indexs, weights = self.memory.sample()
         else:

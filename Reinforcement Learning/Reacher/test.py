@@ -1,9 +1,9 @@
 import sys
 
-import torch
+from unityagents import UnityEnvironment
+
 from agent import *
 from config import *
-from unityagents import UnityEnvironment
 
 if __name__ == '__main__':
     agent = Agent(33, 4, 1)
