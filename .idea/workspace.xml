@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99738c6a-9acc-4b31-aa47-8850f21710c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/A3C/A3C.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/.idea/Data Dashboard.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/.idea/misc.xml" beforeDir="false" />
@@ -23,16 +21,7 @@
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/data/dataset/data.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/data/fetchData.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Scientist/Data Dashboard/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reacher/agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reacher/checkpoints/Vanilla DDPG_single/actor_checkpoint.pth" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/checkpoints/Vanilla DDPG_single/actor_checkpoint.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reacher/checkpoints/Vanilla DDPG_single/critic_checkpoint.pth" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/checkpoints/Vanilla DDPG_single/critic_checkpoint.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reacher/checkpoints/Vanilla DDPG_single/scores.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/checkpoints/Vanilla DDPG_single/scores.npy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reacher/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reacher/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reacher/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reacher/unity-environment.log" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/unity-environment.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reacher/utils/MemoryBuffer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/utils/MemoryBuffer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reachers.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reinforcement Learning/Reacher/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reinforcement Learning/Reacher/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,6 +212,7 @@
       <workItem from="1585732652606" duration="1090000" />
       <workItem from="1585739264352" duration="5680000" />
       <workItem from="1585745971399" duration="2575000" />
+      <workItem from="1585753433913" duration="252000" />
     </task>
     <servers />
   </component>
