@@ -7,7 +7,7 @@ from agent import *
 from config import *
 
 
-def train(agent, env, n_episodes=30000, max_t=100000):
+def train(agent, env, n_episodes=300000, max_t=100000):
     # get the default brain
     brain_name = env.brain_names[0]
 
@@ -27,7 +27,7 @@ def train(agent, env, n_episodes=30000, max_t=100000):
             rewards = env_info.rewards
             dones = env_info.local_done
             agent.step(states, actions, rewards, next_states, dones)
-            if i % 100 == 0:
+            if i % 20 == 0:
                 agent.sample_and_learn()
             scores += rewards
             states = next_states

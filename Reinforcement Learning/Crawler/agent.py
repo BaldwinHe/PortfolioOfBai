@@ -117,8 +117,8 @@ class Agent():
         self.soft_update(self.critic, self.critic_target, TAU)
 
     def load(self, actor_path, critic_path):
-        self.actor.load_state_dict(torch.load(actor_path), map_location=torch.device('cpu'))
-        self.critic.load_state_dict(torch.load(critic_path), map_location=torch.device('cpu'))
+        self.actor.load_state_dict(torch.load(actor_path, map_location=torch.device('cpu')))
+        self.critic.load_state_dict(torch.load(critic_path, map_location=torch.device('cpu')))
 
     def save(self,actor_path, critic_path):
         torch.save(self.actor.state_dict(), actor_path)
