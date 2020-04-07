@@ -6,3 +6,6 @@ venv/
 **/.DS_Store
 **/**.cpython-36.pyc
 **.app/
+.idea/
+**.app
+**.app
