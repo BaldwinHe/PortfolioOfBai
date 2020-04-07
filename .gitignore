@@ -3,3 +3,6 @@ venv/
 *.pyc
 *.log
 **/**/**.app/
+**/.DS_Store
+**/**.cpython-36.pyc
+**.app/
